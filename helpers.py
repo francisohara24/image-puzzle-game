@@ -36,7 +36,7 @@ def divide_image( input_image: Image, rows: int, columns: int) -> list[Image]:
 
 
 def random_list_generator(b: int) -> list[int]:
-    """Return a list of `b` random integers within the range of 0 to `b` inclusive.
+    """Return a list of `b` random integers within the range of 1 to `b` inclusive.
     The randomness is in the position of each number in the list."""
     numbers = []
     while len(numbers) < b:
