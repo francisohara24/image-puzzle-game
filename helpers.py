@@ -1,8 +1,8 @@
 """Helper functions for manipulating images."""
 from PIL import Image
+from random import randint
 
-
-def divide_image(self, input_image: Image, rows, columns):
+def divide_image( input_image: Image, rows: int, columns: int) -> list[Image]:
     """Divide `input_image` into `rows` x `columns` pieces and return a list of the pieces."""
     pieces = []  # list of resulting image pieces
     total_width, total_height = input_image.size # input image dimensions
@@ -34,3 +34,18 @@ def divide_image(self, input_image: Image, rows, columns):
 
     return pieces
 
+
+def random_list_generator(b: int) -> list[int]:
+    """Return a list of `b` random integers within the range of 0 to `b` inclusive.
+    The randomness is in the position of each number in the list."""
+    numbers = []
+    while len(numbers) < b:
+        number = randint(1, b)
+        if number not in numbers:
+            numbers.append(number)
+
+    return numbers
+
+# test each helper function
+if __name__ == "__main__":
+    print(random_list_generator(10))
