@@ -12,7 +12,7 @@ A 3 x 3 grid semi-interactive image puzzle game built entirely using the Pillow 
 1. Player can choose
 
 ## How to Play
-1. Add screen shot for each step!
+1. Add screenshot for each step!
 2. Each tile can only be moved either vertically or horizontally to the empty slot but not diagonally.
-3.
+3. 
 
