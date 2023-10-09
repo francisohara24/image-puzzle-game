@@ -95,7 +95,17 @@ class Puzzle:
         return player_won
 
     def render_puzzle(self):
-        print("puzzle rendered.")
+        total_width, total_height = self.image.size
+        tile_width = total_width // 3
+        tile_height = total_height // 3
+        rendered_puzzle = Image.new("RGB", (total_width, total_height), 255)
+
+        for tile in self.tiles.values():
+            tile_coordinate_x = tile_width * divmod(tile.position - 1, 3)[1]
+            tile_coordinate_y = tile_height * divmod(tile.position - 1, 3)[0]
+            rendered_puzzle.paste(tile.render(), (tile_coordinate_x, tile_coordinate_y))
+
+        rendered_puzzle.show()
 
     def start_win_sequence(self):
         """Write images and text to congratulate the player"""
@@ -126,7 +136,9 @@ class Tile:
         self.image = image
 
     def render(self):
-        pass
+        """Render the tile."""
+        # modify the image later; add borders to distinguish tiles
+        return self.image
 
 
 # ------------------------------------HELPER--FUNCTIONS-----------------------------------------
