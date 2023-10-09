@@ -1,4 +1,5 @@
 from PIL import Image
+from IPython.display import display
 from helpers import divide_image, random_list_generator
 
 class Tile:
@@ -31,7 +32,7 @@ class Puzzle:
         tile_images = divide_image(self.image, 3,3)
 
         # construct 8 tiles from images
-        for i in range(tile_images)[:-1]:
+        for i in range(len(tile_images) - 1):
             random_positions = random_list_generator(8)
             right_position = i + 1
             random_position = random_positions[i]
@@ -132,7 +133,7 @@ def play():
     print("Welcome to the puzzle Game!")
 
     # Instantiate puzzle and display to user
-    game = Puzzle("data/puzzle_img_1.png")
+    game = Puzzle("data/puzzle_img_1.jpg")
     game.render_puzzle()
     player_won = False
 
