@@ -20,9 +20,9 @@ class Puzzle:
         # Divide image into list of 9 images
         tile_images = divide_image(self.image, 3, 3)
 
+        random_positions = random_list_generator(8)
         # construct 8 tiles from images
         for i in range(len(tile_images) - 1):
-            random_positions = random_list_generator(8)
             right_position = i + 1
             random_position = random_positions[i]
             tile_id = random_position
