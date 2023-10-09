@@ -9,9 +9,10 @@ def play():
     print("Welcome to the puzzle Game!")
 
     # Instantiate puzzle and display to user
-    game = Puzzle("https://i.pinimg.com/originals/4f/e7/06/4fe7066d4f3aa7201e38484230fc32b3.jpg")
+    game = Puzzle("https://imageupload.io/ib/mU2ho0sgtobbOP2_1696886540.jpg")
     game.render_puzzle()
     player_won = False
+
 
     while not player_won:
         # Ask user which tile they would like to move and to what destination
