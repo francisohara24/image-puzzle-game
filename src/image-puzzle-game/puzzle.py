@@ -1,6 +1,7 @@
 """All classes and helper functions for the image puzzle game"""
 from PIL import Image
 from random import randint
+import requests
 
 
 # ----------------PUZZLE--CLASSES-----------------------------
@@ -11,9 +12,10 @@ class Puzzle:
     empty_position = None
     movable_positions = []
 
-    def __init__(self, puzzle_image_path: str):
+    def __init__(self, puzzle_image_url: str):
         # Read puzzle image
-        self.image = Image.open(puzzle_image_path)
+        puzzle_image = requests.get(puzzle_image_url, stream=True).raw
+        self.image = Image.open(puzzle_image)
 
         # Divide image into list of 9 images
         tile_images = divide_image(self.image, 3, 3)
