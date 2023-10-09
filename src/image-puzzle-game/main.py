@@ -15,8 +15,8 @@ def play():
 
     while not player_won:
         # Ask user which tile they would like to move and to what destination
-        user_tile = input("What tile would you like to move?\t")
-        user_destination = input("Where would you like to move it to")
+        user_tile = input("What tile would you like to move?\n")
+        user_destination = input("Where would you like to move it to\n")
 
         # move tile and update empty slot and movable tiles
         moved = game.move(int(user_tile), int(user_destination))
