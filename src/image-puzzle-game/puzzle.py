@@ -1,5 +1,6 @@
 """All classes and helper functions for the image puzzle game"""
 from PIL import Image
+from PIL.ImageDraw import ImageDraw
 from random import randint
 import requests
 
@@ -137,7 +138,8 @@ class Tile:
 
     def render(self):
         """Render the tile."""
-        # modify the image later; add borders to distinguish tiles
+        drawer = ImageDraw(self.image)
+        drawer.text((0,0), str(self.tile_id), fill=(255, 255, 255))
         return self.image
 
 
