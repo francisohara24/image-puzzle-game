@@ -168,11 +168,11 @@ def divide_image( input_image: Image, rows: int, columns: int) -> list[Image]:
             left += piece_width
             right += piece_width
 
-    # update cropping coordinates for next row
-    left = 0
-    right = 0
-    upper += piece_height
-    lower += piece_height
+        # update cropping coordinates for next row
+        left = 0
+        right = piece_width
+        upper += piece_height
+        lower += piece_height
 
     return pieces
 
