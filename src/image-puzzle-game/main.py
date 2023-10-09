@@ -1,4 +1,5 @@
 from puzzle import Puzzle
+from time import sleep
 
 
 def play():
@@ -12,6 +13,7 @@ def play():
     game = Puzzle("https://imageupload.io/ib/mU2ho0sgtobbOP2_1696886540.jpg")
     game.render_puzzle()
     player_won = False
+    sleep(1)
 
 
     while not player_won:
