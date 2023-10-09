@@ -21,7 +21,7 @@ def play():
         # move tile and update empty slot and movable tiles
         moved = game.move(int(user_tile), int(user_destination))
         if not moved:
-            print("Choose a valid tile\n")
+            print("Choose a valid tile!\n")
         else:
             game.render_puzzle()
 
