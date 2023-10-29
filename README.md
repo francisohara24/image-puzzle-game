@@ -1,5 +1,6 @@
 # image-puzzle-game
 ![logo](https://raw.githubusercontent.com/francisohara24/image-puzzle-game/master/data/image-puzzle-game-logo.png)
+
 A 3 x 3 grid semi-interactive image puzzle game built entirely using the Pillow Python library.
 
 - Designed to be executed in an Interactive Python notebook environment.
