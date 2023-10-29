@@ -9,6 +9,7 @@ authors = [
     { name="Francis O'Hara", email="franciskohara@gmail.com" },
 ]
 description = "A 3x3 grid image puzzle game built using the Pillow library."
+keywords = ["pillow", "puzzle", "game", "image", "play", "games", "jupyter", "notebook"]
 readme = "README.md"
 requires-python = ">=3.10"
 classifiers = [
