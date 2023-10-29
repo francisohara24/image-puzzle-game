@@ -208,7 +208,7 @@ def play():
     game_print("WELCOME TO THE IMAGE PUZZLE GAME!")
 
     # Instantiate puzzle and display to user
-    game = Puzzle("https://imageupload.io/ib/3eehUfZbRlSv3kG_1696886602.jpg")
+    game = Puzzle("https://github.com/francisohara24/image-puzzle-game/blob/master/data/puzzle_img_2.jpg?raw=true")
     game.render_puzzle()
     sleep(1)
     player_won = False
