@@ -11,6 +11,15 @@ A 3 x 3 grid semi-interactive image puzzle game built entirely using the Pillow 
 3. Press the round play (run) button.
 3. Enjoy the game!
 
+# Installation
+In a Jupyter Notebook Environment:
+1. Run `!pip install image-puzzle-game`
+2. Run the following in a code cell of your notebook:
+```python
+from image_puzzle_game import play
+play()
+```
+3. Enjoy the game!
 
 ## How to Play
 1. Enter the number of the tile you would like to move (displayed on the tiles from 1 to 8).
